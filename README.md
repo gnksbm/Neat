@@ -1,7 +1,16 @@
 # Neat
+[![Swift](https://img.shields.io/badge/Swift-5.1-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.1-Orange?style=flat-square)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS-yellowgreen?style=flat-square)](https://img.shields.io/badge/Platforms-iOS-Green?style=flat-square)
 [![SwiftPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
 
-Syntactic sugar for class Object, especially for UIKit components.
+
+Syntactic sugar for class object, especially for UIKit UI components.
+
+## Why Use Neat?
+
+- **Simplify Your Code:** Neat helps you quickly set up class objects by removing boilerplate code.
+- **Avoid Errors:** Method chaining reduces the possibility of mistakes.
+- **Improve Readability:** Chaining properties and methods enhances code readability.
 
 ## Installation
 
@@ -18,9 +27,11 @@ dependencies: [
 
 ### Basic Usage
 
-Initializes a UILabel configured properties set.
+Initializes a UILabel with configured properties.
 
 ```swift
+import Neat
+
 let label = UILabel().nt.configure {
     $0.text("Neat")
         .font(.systemFont(ofSize: 17, weight: .semibold))
@@ -29,7 +40,7 @@ let label = UILabel().nt.configure {
 }
 ```
 
-This is equivalent to
+This is equivalent to:
 
 ```swift
 let label: UILabel = {
@@ -51,11 +62,10 @@ let button = UIButton().nt.configure {
         .configuration.baseForegroundColor(.secondaryLabel)
         .layer.cornerRadius(10)
         .layer.borderWidth(1)
-        .clipsToBounds(true)
 }
 ```
 
-### Extended Frequently Used Methods
+### Extended Commonly Used Methods
 
 ```swift
 lazy var button = UIButton().nt.configure {
@@ -65,7 +75,7 @@ lazy var button = UIButton().nt.configure {
         .addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 }
 
-lazy var tableView = UITableView().nt.configure {
+let tableView = UITableView().nt.configure {
     $0.register(UITableViewCell.self)
 }
 ```
@@ -75,9 +85,9 @@ lazy var tableView = UITableView().nt.configure {
 ```swift
 let view = UIView().nt.configure {
     $0.perform {
-        // Perform any direct operations on the base object 
-        $0.updateFocusIfNeeded()
-            .customMethod()
+        // Perform any direct operations on the base object. 
+        $0.becomeFirstResponder()
+        $0.yourMethod()
     }
 }
 ```
