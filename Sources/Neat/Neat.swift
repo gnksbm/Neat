@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 @dynamicMemberLookup
 public struct Neat<Base: AnyObject> {
@@ -143,6 +143,8 @@ public struct OptionalPropertyNeat<Parent: AnyObject, Property> {
     }
 }
 
+#if canImport(UIKit)
+import UIKit
 public extension Neat where Base: UIView {
     func addSubview(view: UIView) -> Neat<Base> {
         base.addSubview(view)
@@ -275,3 +277,4 @@ public extension Neat where Base: UITabBarAppearance {
         return self
     }
 }
+#endif
