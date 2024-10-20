@@ -1,12 +1,9 @@
-// swift-tools-version:5.1
+// swift-tools-version:4.2
 
 import PackageDescription
 
 let package = Package(
     name: "Neat",
-    platforms: [
-        .iOS(.v8)
-    ],
     products: [
         .library(name: "Neat", targets: ["Neat"]),
         .library(name: "Neat-Dynamic", type: .dynamic, targets: ["Neat"])
@@ -15,6 +12,6 @@ let package = Package(
         .target(name: "Neat")
     ],
     swiftLanguageVersions: [
-        .v5
+        .v4_2
     ]
 )
