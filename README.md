@@ -1,6 +1,6 @@
 # Neat
-[![Swift](https://img.shields.io/badge/Swift-5.1-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.1-Orange?style=flat-square)
-[![Platforms](https://img.shields.io/badge/Platforms-iOS-yellowgreen?style=flat-square)](https://img.shields.io/badge/Platforms-iOS-Green?style=flat-square)
+[![Swift](https://img.shields.io/badge/Swift-4.2-orange?style=flat-square)](https://img.shields.io/badge/Swift-4.2-Orange?style=flat-square)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS%20|%20macOS%20|%20watchOS%20|%20tvOS-yellowgreen?style=flat-square)](https://img.shields.io/badge/Platforms-iOS%20|%20macOS%20|%20watchOS%20|%20tvOS-Green?style=flat-square)
 [![SwiftPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
 
 
